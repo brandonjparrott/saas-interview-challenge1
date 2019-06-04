@@ -2,6 +2,8 @@
 ---
 For this challenge I decided to make a simple work queue system for checking if words are a Palindrome. Both the API and Worker are written in Typescript using Bull Queue Library to handle the Pub/Sub in Redis. All the services are deployed with Kubernetes and built with Docker.
 
+Instead of using Minikube to run Kubernetes locally, I noticed that the Docker Desktop application for mac osx had a Kubernetes single-node cluster. I wanted to give it a try. 
+
 I didn't get to spend too much time on this challenge due to a busy schedule and my daughters first birthday. There is lots of room for improvement.
 
 I was attempting to spin up Prometheus/Grafana to monitor the K8s pods and Work Queue. Due to time constraints I wasn't able to get it working correctly. I believe this is due to Docker/K8s limitations on my machine. The Grafana pod wouldn't start because of insufficient memory.
