@@ -1,5 +1,6 @@
 ## SAAS Interview Challenege
 ---
+*Note: please read CHALLENGE.md*
 
 ### Prerequisites
 
