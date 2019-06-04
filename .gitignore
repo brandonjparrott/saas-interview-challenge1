@@ -1,0 +1,4 @@
+api/dist
+worker/dist
+api/node_modules
+worker/node_modules

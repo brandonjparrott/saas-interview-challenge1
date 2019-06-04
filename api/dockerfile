@@ -1,0 +1,23 @@
+# Stage 1 - Base Image
+FROM node AS base
+WORKDIR /api
+
+# Stage 2 - Install All Dependencies 
+FROM base AS dependencies
+COPY package*.json ./
+RUN npm install
+
+# Stage 3 - Build
+FROM dependencies AS build
+WORKDIR /api
+COPY . /api
+RUN npm run build
+
+# Stage 4 - Release
+FROM node:8.9-alpine AS release
+WORKDIR /api
+COPY --from=dependencies /api/package.json ./
+RUN npm install --only=production
+COPY --from=build /api ./
+EXPOSE 8080
+CMD ["npm", "run", "start"]

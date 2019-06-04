@@ -1,0 +1,24 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "ForgeRock Coding Challenge",
+  "main": "dist/worker.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/worker.ts",
+    "build": "rm -rf ./dist/ && tsc",
+    "start": "node dist/worker.js"
+  },
+  "author": "Brandon Parrott",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bull": "^3.5.14",
+    "@types/node": "^12.0.4",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "@overnightjs/logger": "^1.1.4",
+    "bull": "^3.10.0"
+  }
+}
