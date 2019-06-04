@@ -4,6 +4,8 @@ For this challenge I decided to make a simple work queue process for checking if
 
 I didn't get to spend too much time on this challenge due to a busy schedule and my daughters first birthday. There is lots of room for improvement and I wouldn't be confident with shipping this to production or even as a POC. 
 
+I was attempting to spin up Prometheus/Grafana to monitor the K8s pods and Work Queue. Due to time constraints I wasn't able to get it working correctly. I believe this is due to Docker/K8s limitations on my machine. 
+
 ---
 
 ###### Are there any shortcomings of the code?

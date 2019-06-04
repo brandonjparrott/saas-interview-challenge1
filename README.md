@@ -42,8 +42,6 @@ Using the launch script:
 
 ```./launch.sh```
 
-```kubectl apply -f ./kube```
-
 ##### Delete K8s Config
 
 ```kubectl delete -f ./kube```

@@ -1,7 +1,27 @@
 #!/bin/bash
 
-kubectl apply -f ./kube/redis.yaml
+kubectl create -f ./kube/redis.yaml
 
-kubectl apply -f ./kube/api.yaml
+sleep 2
 
-kubectl apply -f ./kube/worker.yaml
+kubectl create -f ./kube/api.yaml
+
+sleep 2
+
+kubectl create -f ./kube/worker.yaml
+
+# sleep 2 
+
+# kubectl create -f ./kube/queue-exporter.yaml
+
+# sleep 2
+
+# kubectl create -f ./kube/monitoring-namespace.yaml
+
+# sleep 2
+
+# kubectl  create -f ./kube/grafana.yaml
+
+# sleep 2
+
+# kubectl create -f ./kube/prometheus.yaml
