@@ -1,4 +1,4 @@
-## SAAS Interview Challenege
+## SAAS Interview Challenge
 ---
 *Note: please read CHALLENGE.md*
 
@@ -17,13 +17,20 @@ To build the API and Worker docker image, you can run the script build-images.sh
 
 `./build-images.sh`
 
-You can also build them invidually using the following docker commands:
+You can also build them individually using the following docker commands:
 
 ```bash
 docker build -t forgerock-api ./api
 
 docker build -t forgerock-worker ./worker
 ```
+
+### Testing
+---
+
+Navigate to either ./api or ./worker and run the following npm command
+
+`npm run test`
 
 ### Deploying it locally
 ---
