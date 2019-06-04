@@ -2,6 +2,7 @@
 ---
 For this challenge I decided to make a simple work queue process for checking if words are a Palindrome. Both the API and Worker are written in Typescript using Bull Queue Library to handle the Pub/Sub in Redis. All the services are deployed with Kubernetes and built with Docker.
 
+I didn't get to spend too much time on this challenge due to a busy schedule and my daughters first birthday. There is lots of room for improvement and I wouldn't be confident with shipping this to production or even as a POC. 
 
 ---
 
