@@ -28,7 +28,7 @@ docker build -t forgerock-worker ./worker
 ### Deploying it locally
 ---
 
-Since we are not using GKE, I decided to use the built in kubernetes support that the Docker Desktop provides. 
+Since we are not using GKE, I decided to use the built in kubernetes support that Docker Desktop provides. 
 
 Once you have enabled kubernetes with Docker Desktop, you must first set the context to docker-for-desktop
 
@@ -44,7 +44,7 @@ Using the launch script:
 
 ##### Delete K8s Config
 
-```kubectl delete -f ./kube```
+```./down.sh```
 
 ##### See running pods
 

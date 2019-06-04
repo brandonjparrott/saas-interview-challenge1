@@ -10,16 +10,15 @@ I was attempting to spin up Prometheus/Grafana to monitor the K8s pods and Work 
 
 ###### Are there any shortcomings of the code?
 
-Yes, this system is not production ready. I wasn't able to take the time to write the necessary tests and handle all possible edge cases. Using Node JS for the worker could also be problematic because Node is single threaded. 
+Yes, right off the bat I a missing unit and integration tests for the API and Worker. I am also not handling all possible edge cases or proper error handling. Currently if a job on the queue has failed or stalled it will not be removed from redis. 
 
-Ideally I would want to deploy to a managed cluster like GKE and use a language that supports concurrency. 
+I would also look into a different queue library such as node-celery and run Python/celery on the worker.
 
-Depending on the problem there could be multiple ways to implement a worker design pattern. Could get away with running a long living service that polls from the queue, or design a Kubernetes Job that spins up when a event is triggered.
-    
+I used Node/Typescript because I was more familiar with the language and haven't had much of a chance to play around with GoLang. Using node has added it's own limitations when it comes to processing requests concurrently. 
     
 ###### How might this project be scaled?
 
-Locally we can scale horizontally by scaling the worker pod and increasing the replica count.
+We can scale horizontally by scaling the worker pod and increasing the replica count in the worker k8s deployment yaml.
 
 Adding multiple API replicas and implementing a load balancer to increase request throughput.
 
